@@ -32,6 +32,10 @@ export const InputContainer = styled.div`
     align-items: center;
     border-radius: 5px;
 
+    &:has(input:hover), &:has(input:focus){
+        outline:  2px solid #26c2ae;
+    }
+
     input{
         border: 0;
         background: transparent;
@@ -50,6 +54,8 @@ export const InputContainer = styled.div`
           -webkit-appearance: none;
           margin:0;
         }
+
+       
     }
 `
 
@@ -62,6 +68,8 @@ export const ButtonsContainer = styled.div`
     display: grid;
     grid-template-columns: 1fr 1fr;
     gap: 1rem;
+
+    
 
     input{
         border:0
@@ -80,13 +88,27 @@ export const ButtonsContainer = styled.div`
         &::placeholder{
             color: #547878;
         }
+
+        &:hover{
+            background:#9fe8df;
+            cursor:pointer;
+            outline: 2px solid rgb(159, 232, 223);
+            border: 0;
+        }
     }
 
     input#custom-tip{
         width: 100%;
         color: #00474B;
         outline: none;
+        
         text-align: center;
+        
+        &:focus,
+        &:hover{
+            outline: 2px solid #26c2ae;
+            border: none
+        }
 
         &::-webkit-outer-spin-button,
         &::-webkit-inner-spin-button{
@@ -107,59 +129,3 @@ export const PorcentagemContainer = styled(ContaContainer)`
 
 export const PessoasContainer = styled(ContaContainer)``
 
-export const ResultadosContainer = styled.div`
-    background: #00474B;
-    border-radius: 15px;
-    padding: 2rem 1.5rem;
-
-    button{
-        width: 100%;
-        background: #26c2ae;
-        color: #00474B;
-        border: 0;
-        font-size: 1.25rem;
-        padding-block: 0.5rem;
-        text-transform: uppercase;
-        border-radius: 5px;
-    }
-
-    
-    @media(min-width: 950px){
-        display: flex;
-        flex-direction: column;
-        justify-content: space-between;
-    }
-`
-
-export const GorjetaContainer = styled.div`
-    display:flex;   
-    margin-bottom: 1.25rem;
-    justify-content: space-between;
-    align-items: center;
-
-    p:first-child{
-        color: #FFF;
-        line-height: 1.25rem;
-
-        span{
-            color:#7f9d9F;
-            font-size: 0.75rem;
-        }
-    }
-
-    p:last-child{
-        color: #26C2AE;
-        font-size: 2rem;
-        line-height: 3rem;
-    }
-
-
-`
-
-export const TotalContainer = styled(GorjetaContainer)`
-    margin-bottom: 2rem;
-`
-
-export const GorjetaTotalContainer = styled.div`
-
-`
