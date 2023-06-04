@@ -6,7 +6,7 @@ export const GlobalStyle = createGlobalStyle`
         padding: 0;
         box-sizing: border-box;
         -webkit-font-smoothin: antialiased;
-        font-family: 'Space Mono', monospace;
+        font-family: 'Titillium Web';
     }
 
     body{
